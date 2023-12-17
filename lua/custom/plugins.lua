@@ -14,6 +14,7 @@ local plugins ={
         "typescript-language-server",
         "tailwindcss-language-server",
         "prisma-language-server",
+        "emmet-ls",
       }
     }
   },
@@ -81,5 +82,9 @@ local plugins ={
     "tpope/vim-fugitive",
     lazy = false,
   },
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+  }
 }
 return plugins
