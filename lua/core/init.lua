@@ -12,6 +12,9 @@ g.transparency = config.ui.transparency
 opt.laststatus = 3 -- global statusline
 opt.showmode = false
 
+vim.opt.wrap = false
+vim.opt.scrolloff = 8
+
 opt.clipboard = "unnamedplus"
 opt.cursorline = true
 
