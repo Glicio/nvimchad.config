@@ -40,6 +40,9 @@ local plugins ={
     lazy = false,
   },
   {
+    "ThePrimeagen/vim-be-good",
+  },
+  {
     "sbdchd/neoformat",
     lazy = false,
     config = function() end,
