@@ -69,16 +69,6 @@ M.telescope = {
   },
 }
 
-M.copilot = {
-  i = {
-    ["<C-g>"] = {
-      function()
-        require("copilot.suggestion").accept()
-      end,
-    },
-  },
-}
-
 M.navigator = {
   n = {
     ["<C-j>"] = {
