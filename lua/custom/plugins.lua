@@ -19,21 +19,8 @@ local plugins ={
     }
   },
     {
-    "zbirenbaum/copilot.lua",
+    "github/copilot.vim",
     lazy = false,
-    cmd = "Copilot",
-    event = "InsertEnter",
-    config = function()
-      require("copilot").setup {
-        filetypes = {
-          typescript = true,
-          markdown = true,
-        },
-        suggestion = {
-          auto_trigger = true,
-        },
-      }
-    end,
   },
   {
     "mattn/emmet-vim",
