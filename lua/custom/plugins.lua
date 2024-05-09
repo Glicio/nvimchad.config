@@ -21,6 +21,20 @@ local plugins ={
     {
     "github/copilot.vim",
     lazy = false,
+    config = function()
+      vim.keymap.set("i","<C-g>",'copilot#Accept()', {
+        expr = true,
+        replace_keycodes = true,
+      })
+      vim.keymap.set("i","<C-n>",'copilot#Next()', {
+        expr = true,
+        replace_keycodes = true,
+      })
+      vim.keymap.set("i","<C-p>",'copilot#Previous()', {
+        expr = true,
+        replace_keycodes = true,
+      })
+    end
   },
   {
     "mattn/emmet-vim",
