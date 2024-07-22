@@ -4,7 +4,7 @@ local capabilities = base.capabilities
 
 local lspconfig = require("lspconfig")
 
-local servers = {"bashls", "html", "cssls", "tsserver", "prismals", "tailwindcss", "emmet_ls" }
+local servers = {"bashls", "html", "cssls", "tsserver", "prismals", "tailwindcss", "emmet_ls", "java_language_server" }
 
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
@@ -20,6 +20,19 @@ lspconfig.clangd.setup {
     on_attach(client, bufnr)
   end,
   capabilities = capabilities,
+}
+
+lspconfig.tsserver.setup {
+  on_attach = function (client, bufnr)
+    on_attach(client, bufnr)
+  end,
+  capabilities = capabilities,
+  init_options = {
+    preferences = {
+      importModuleSpecifierPreference = "relative",
+      -- includeCompletionsForModuleExports = false,
+    },
+  },
 }
 
 lspconfig.rust_analyzer.setup({

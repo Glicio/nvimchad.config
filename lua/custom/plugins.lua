@@ -17,32 +17,45 @@ local plugins ={
         "emmet-ls",
       }
     }
-  },
-    {
-    "github/copilot.vim",
-    lazy = false,
-    config = function()
-        vim.keymap.set('i', '<C-g>', 'copilot#Accept("\\<CR>")', {
-          expr = true,
-          replace_keycodes = false
-        })
-        vim.g.copilot_no_tab_map = true
-      vim.keymap.set("i","<C-n>",'copilot#Next()', {
-        expr = true,
-        replace_keycodes = true,
+  },{
+  "supermaven-inc/supermaven-nvim",
+  lazy = false,
+  config = function()
+    require("supermaven-nvim").setup({
+        keymaps = {
+          accept_suggestion = "<C-g>",
+        }
       })
-      vim.keymap.set("i","<C-p>",'copilot#Previous()', {
-        expr = true,
-        replace_keycodes = true,
-      })
-    end
+  end,
   },
+  --   {
+  --   "github/copilot.vim",
+  --   lazy = false,
+  --   config = function()
+  --       vim.keymap.set('i', '<C-g>', 'copilot#Accept("\\<CR>")', {
+  --         expr = true,
+  --         replace_keycodes = false
+  --       })
+  --       vim.g.copilot_no_tab_map = true
+  --     vim.keymap.set("i","<C-n>",'copilot#Next()', {
+  --       expr = true,
+  --       replace_keycodes = true,
+  --     })
+  --     vim.keymap.set("i","<C-p>",'copilot#Previous()', {
+  --       expr = true,
+  --       replace_keycodes = true,
+  --     })
+  --   end
+  -- },
   {
     "mattn/emmet-vim",
     lazy = false,
   },
   {
     "ThePrimeagen/vim-be-good",
+  },
+  {
+    "nvim-java/nvim-java",
   },
   {
     "sbdchd/neoformat",
