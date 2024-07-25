@@ -18,6 +18,12 @@ vim.opt.scrolloff = 8
 opt.clipboard = "unnamedplus"
 opt.cursorline = true
 
+-- folds
+vim.opt.fillchars = { fold = " " }
+vim.opt.foldmethod = "indent"
+vim.opt.foldenable = false
+vim.opt.foldlevel = 99
+g.markdown_folding = 1 -- enable markdown folding
 -- Indenting
 opt.expandtab = true
 opt.shiftwidth = 2
