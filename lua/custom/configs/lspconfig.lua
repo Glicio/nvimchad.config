@@ -4,7 +4,7 @@ local capabilities = base.capabilities
 
 local lspconfig = require("lspconfig")
 
-local servers = {"bashls", "html", "cssls", "tsserver", "prismals", "tailwindcss", "emmet_ls", "java_language_server" }
+local servers = {"bashls", "html", "cssls", "tsserver", "prismals", "tailwindcss", "emmet_ls", "gradle_ls" }
 
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
@@ -12,7 +12,6 @@ for _, lsp in ipairs(servers) do
       capabilities = capabilities,
     }
 end
-
 
 lspconfig.clangd.setup {
   on_attach = function (client, bufnr)

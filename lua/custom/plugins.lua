@@ -17,7 +17,14 @@ local plugins ={
         "emmet-ls",
       }
     }
-  },{
+  },
+  {
+    "mfussenegger/nvim-jdtls",
+     lazy = false,
+     config = function()
+    end
+  },
+  {
   "supermaven-inc/supermaven-nvim",
   lazy = false,
   config = function()
