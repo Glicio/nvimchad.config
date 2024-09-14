@@ -21,8 +21,6 @@ local plugins ={
   {
     "mfussenegger/nvim-jdtls",
      lazy = false,
-     config = function()
-    end
   },
   {
   "supermaven-inc/supermaven-nvim",

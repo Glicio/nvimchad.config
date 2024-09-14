@@ -71,3 +71,4 @@ vim.keymap.set('v', '<leader>crc', "<Esc><Cmd>lua require('jdtls').extract_const
 vim.keymap.set('v', '<leader>crm', "<Esc><Cmd>lua require('jdtls').extract_method(true)<CR>", { desc = 'Extract Method' })
 vim.keymap.set('n', 'gd', "<Cmd>lua vim.lsp.buf.definition()<CR>", { desc = 'Go to definition' })
 vim.keymap.set('n', 'K', "<Cmd>lua vim.lsp.buf.hover()<CR>", { desc = 'Hover' })
+vim.keymap.set('n', '<leader>lf', function() vim.diagnostic.open_float { border = "rounded" } end, { desc = 'Floating diagnostic' })
